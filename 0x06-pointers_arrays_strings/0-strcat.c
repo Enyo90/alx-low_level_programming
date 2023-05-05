@@ -1,11 +1,27 @@
 #include "main.h"
+#include <stdio.h>
 /**
- * reset_to_98 - reset the n value to 98
- * @n: pointer parameter
- * Description: change pointer value
- * Return: void
+ * *_strcat - concatenates @src to @dest
+ * @src: the source string to append to @dest
+ * @dest: the destiation string to be concatenated upon
+ * Return:pointer to the resulting string
  */
-void reset_to_98(int *n)
+char *_strcat(char *dest, char *src)
 {
-*n = 98;
+    int i, j;
+    i = 0;
+    j = 0;
+while (dest[i] != '\0')
+{
+i++;
+}
+while (src[j] != '\0')
+{
+dest[i] = src[j];
+i++;
+j++;
+}
+i++;
+dest[i] = '\0';
+return (dest);
 }
